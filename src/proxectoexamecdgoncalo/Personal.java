@@ -21,4 +21,4 @@ public class Personal {
  return sueldo_base + complemento + (horas_extras *
 sueldo_base / 160);
  }
-}
+} 
