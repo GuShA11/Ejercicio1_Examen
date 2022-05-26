@@ -4,7 +4,6 @@
  * and open the template in the editor.
  */
 package proxectoexamecdgoncalo;
-
 /**
  *
  * @author alumno
@@ -15,7 +14,12 @@ public class Main {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic he   
+        Empregado p1 = new Programador("Proyecto 1",3.5);
+        VerSueldo(p1);
+    }
+
+    private static void VerSueldo(Empregado p1) {
+        System.out.println(p1.sueldoBruto());
     }
     
 }
