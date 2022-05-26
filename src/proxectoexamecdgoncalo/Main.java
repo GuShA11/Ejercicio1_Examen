@@ -18,6 +18,10 @@ public class Main {
         VerSueldo(p1);
     }
 
+    /**
+     * Devuelve un el sueldoBruto
+     * @param p1 
+     */
     private static void VerSueldo(Empregado p1) {
         System.out.println(p1.sueldoBruto());
     }

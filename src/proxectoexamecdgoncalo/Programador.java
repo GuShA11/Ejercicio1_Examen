@@ -13,37 +13,75 @@ import java.util.Objects;
  */
 public class Programador extends Empregado {
 
+    /**
+     * String valor de proyecto
+     */
     private String proyecto;
+    /**
+     * Double valor de horas extras
+     */
     private Double horas_extras;
 
+    /**
+     * Constante tipo int valor de precio extra
+     */
     private static final int PRECIO_EXTRA = 160;
 
 
+    /**
+     * Constructor con 2 parametros
+     * @param proyecto
+     * @param horas_extras 
+     */
     public Programador(String proyecto, Double horas_extras) {
         this.proyecto = proyecto;
         this.horas_extras = horas_extras;
     }
 
+    /**
+     * Devuelve el valor del proyecto
+     * @return String - valor del proyecto
+     */
     public String getProyecto() {
         return proyecto;
     }
     
+    /**
+     * Modifica el valor de proyecto
+     * @param proyecto 
+     */
     public void setProyecto(String proyecto) {
         this.proyecto = proyecto;
     }
 
+    /**
+     * Devuelve el valor de horas extras
+     * @return Tipo Double - valor de horas extras
+     */
     public Double getHoras_extras() {
         return horas_extras;
     }
 
+    /**
+     * Modifica el valor de horas extras
+     * @param horas_extras 
+     */
     public void setHoras_extras(Double horas_extras) {
         this.horas_extras = horas_extras;
     }
 
+    /**
+     * Devuelve metodo suledoBruto() de la SuperClase Empregado
+     * @return tipo Double - valor de sueldo bruto 
+     */
     @Override
     public Double sueldoBruto() {
         return sueldo_base + complemento + (horas_extras * sueldo_base / PRECIO_EXTRA);
     }
+    /**
+     * Devuelve el hashCode de la clase 
+     * @return tipo int - valor del hashCode
+     */
     @Override
     public int hashCode() {
         int hash = 7;
@@ -52,6 +90,11 @@ public class Programador extends Empregado {
         return hash;
     }
 
+    /**
+     * Devuelve un booleano
+     * @param obj
+     * @return Tipo boolean - valor del equals
+     */
     @Override
     public boolean equals(Object obj) {
         if (this == obj) {
@@ -73,6 +116,10 @@ public class Programador extends Empregado {
         return true;
     }
 
+    /**
+     * Devuelve valor del toString() de la clase
+     * @return Tipo String - valor del toString()
+     */
     @Override
     public String toString() {
         return "Programador{" + "proyecto=" + proyecto + ", horas_extras=" + horas_extras + '}';
